@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Cadastro lorem ipsum Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="d01" class="main">
+        <img class="group" src="LogoLorenIpsum.jpg" alt="">
+        <h1 class="group">Cadastro Funcionario</h1>
+    </div>
+    <div id="d01" class="menu">
+        <a href="Principal.html"><button class="group">Inicio</button></a>
+        <a href="Cadastro.html"><button class="group"
+                style="background-color: #242424; color: #ffffff;">Cadastro</button></button></a>
+        <a href="Contato.html"><button class="group">Contato</button></button></a>
+    </div>
+    
+    <form method="get" action="envio_dados.php">
+        <div class="form">
+            <label for="id">Id: </label>
+            <input type="text" name="id" placeholder="Digite seu id">
+        </div>
+        <div>
+            <label for="nome">Nome: </label>
+            <input type="text" name="nome" placeholder="digite seu Nome">
+        </div>
+
+        <div>
+            <label for="cep">CEP: </label>
+            <input type="text" id="cep" name="cep" placeholder="Digite seu cep">
+            <input type="button" value="Consultar" onclick="findCEP()">
+        </div>
+
+        <div>
+            <label for="logradouro">Logradouro: </label>
+            <input type="text" id="logradouro" name="lograduro" placeholder="Logradouro">
+        </div>
+
+        <div>
+            <label for="bairro">Bairro: </label>
+            <input type="text" id="bairro" name="bairro" placeholder="Bairro">
+        </div>
+
+        <div>
+            <label for="cidade">Cidade: </label>
+            <input type="text" id="cidade" name="cidade" placeholder="Cidade">
+        </div>
+
+        <div>
+            <label for="uf">UF: </label>
+            <select id="uf" name="uf" >
+                <option value="">Selecione</option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espirito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="numero">Numero do endereço: </label>
+            <input type="text" id="numero" name="Numero" placeholder="1647">
+        </div>
+
+        <div>
+            <label for="estadoCivil">Estado civil: </label>
+            <select id="estadoCivil" name="estadoCivil">
+                <option value="Solteiro">Solteiro</option>
+                <option value="Casado">Casado</option>
+                <option value="Viuvo">Viúvo</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="idade">Idade: </label>
+            <input type="text" id="idade" name="idade" placeholder="18">
+            <input type="button" name="enviar" value="Enviar" onclick="verificaIdade()">
+            <label id="alert" style="color: red;" hidden>Impossivel cadastrar menor de 18 anos </label>
+        </div>
+
+        <div>
+            
+        </div>
+    </form>
+</body>
+<script src="CEP.js"></script>
+
+</html>
