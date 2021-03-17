@@ -18,10 +18,10 @@
         <a href="Contato.html"><button class="group">Contato</button></button></a>
     </div>
     
-    <form method="get" action="envio_dados.php">
+    <form >
         <div class="form">
             <label for="id">Id: </label>
-            <input type="text" name="id" placeholder="Digite seu id">
+            <input type="number" min="1"  name="id" placeholder="Digite seu id">
         </div>
         <div>
             <label for="nome">Nome: </label>
@@ -89,23 +89,28 @@
         </div>
 
         <div>
+            <label for="salario">Salario: </label>
+            <input type="text" id="salario" name="salario" placeholder="1800">
+        </div>
+
+        <div>
             <label for="estadoCivil">Estado civil: </label>
             <select id="estadoCivil" name="estadoCivil">
-                <option value="Solteiro">Solteiro</option>
-                <option value="Casado">Casado</option>
-                <option value="Viuvo">Viúvo</option>
+                <option value="solteiro">Solteiro(a)</option>
+                <option value="casado">Casado(a)</option>
+                <option value="viuvo">Viúvo(a)</option>
             </select>
         </div>
 
         <div>
             <label for="idade">Idade: </label>
-            <input type="text" id="idade" name="idade" placeholder="18">
-            <input type="button" name="enviar" value="Enviar" onclick="verificaIdade()">
-            <label id="alert" style="color: red;" hidden>Impossivel cadastrar menor de 18 anos </label>
+            <input type="text" id="idade" name="idade" required="required" placeholder="18" on="verificaIdade()">
+            
         </div>
 
         <div>
-            
+            <input type="button" name="enviar" value="Enviar" onclick="insert()">
+            <label id="alert" hidden></label>
         </div>
     </form>
 </body>
